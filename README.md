@@ -6,8 +6,8 @@ Unter Berücksichtigung der App-Geschwindigkeit sollten die Laravel-Quelldateien
 
 ## Vorraussetzungen
 - Windows mit WSL2
-- Docker mit aktivierter WSL-Unterstützung
-- VS Code Editor
+- Docker mit aktivierter WSL-Unterstützung - https://www.docker.com/products/docker-desktop/
+- VS Code Editor - https://code.visualstudio.com/
 
 ## WSL workspace Ordner einrichten 
 Zuerst legen wir einen Workspace-Ordner innerhalb des WSL-Filesystems an, dieses finden wir über die Win-Exploreradresszeile unter:
@@ -33,17 +33,18 @@ wsl
 # Neues Laravel-Projekt erstellen
 curl -s "https://laravel.build/example-app?with=pgsql&devcontainer" | bash
 ```
+Weitere Build-Konfigurationen sind hier zu finden:
+
+https://laravel.com/docs/9.x/installation#getting-started-on-linux
 
 ## Sail alias in WSL registrieren
-Um den Befehl 'sail' ständig nutzen zu können, muss dieser in die .bashrc Datei als alias registriert werden. Dazu im Win-Explorer zum WSL-Benutzerordner (../home/max) wechseln und der .bashrc Datei folgende Zeile hinzufügen:
+Um den Befehl 'sail' ständig nutzen zu können, muss dieser einmalig (auch für zukünftige Projekte) in die .bashrc Datei als alias registriert werden. Dazu im Win-Explorer zum WSL-Benutzerordner (../home/max) wechseln und der .bashrc Datei folgende Zeile hinzufügen:
 ```
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 ```
 
 ## Projekt in VS Code öffnen
-Der Editor kann hier kostenlos heruntergeladen werden: https://code.visualstudio.com/
-
-Starte den VS Code Editor und öffne ein WSL-Fenster, dazu im Editor die Taste F1 drücken und im Textfeld "new wsl window" eingeben bzw. auswählen. Links unten sollte danach "WSL:Ubuntu" zu sehen sein.
+Starte den VS Code Editor und öffne ein WSL-Fenster, dazu im Editor die Taste F1 drücken und im Textfeld "new wsl window" eingeben bzw. auswählen. Unten links sollte nun "WSL:Ubuntu" zu sehen sein.
 
 Jetzt nur noch den eben erstellten Projektordner öffnen, unter "Ordner öffnen".
 
