@@ -52,7 +52,13 @@ FORWARD_DB_PORT=25062
 ## Laravel App via Dev Container starten
 Im VS Code Editor sollte die Meldung "Reopen in Dev Container" erscheinen, dort den entsprechenden Button drücken (ansonsten via F1 nach diesen Befehl suchen). Somit findet die Entwicklungsumgebung direkt in Linux statt und alle Terminal-Befehle (ALT+T) entsprechend auch (sail commands sind somit hinfällig).
 
-Und können uns das Ergebnis unter http://localhost im Browser anschauen.
+Weitere Befehle vor dem Öffnen der App im Browser:
+```
+# node_modules
+npm install
+```
+
+Nun kann die App unter http://localhost im Browser geöffnet werden.
 
 Somit ist die Basisanwendung startklar! 
 
