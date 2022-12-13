@@ -37,11 +37,6 @@ Weitere Build-Konfigurationen sind hier zu finden:
 
 https://laravel.com/docs/9.x/installation#getting-started-on-linux
 
-## Sail alias in WSL registrieren
-Um den Befehl 'sail' ständig nutzen zu können, muss dieser einmalig (auch für zukünftige Projekte) in die .bashrc Datei als alias registriert werden. Dazu im Win-Explorer zum WSL-Benutzerordner (../home/max) wechseln und der .bashrc Datei folgende Zeile hinzufügen:
-```
-alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
-```
 
 ## Projekt in VS Code öffnen
 Starte den VS Code Editor und öffne ein WSL-Fenster, dazu im Editor die Taste F1 drücken und im Textfeld "new wsl window" eingeben bzw. auswählen. Unten links sollte nun "WSL:Ubuntu" zu sehen sein.
@@ -54,6 +49,38 @@ Um unabhängig von weiteren installierten Datenbanksystemen auf die Laravel-Date
 FORWARD_DB_PORT=25062
 ```
 
+## Laravel App via Dev Container starten
+Im VS Code Editor sollte die Meldung "Reopen in Dev Container" erscheinen, dort den entsprechenden Button drücken (ansonsten via F1 nach diesen Befehl suchen). Somit findet die Entwicklungsumgebung direkt in Linux statt und alle Terminal-Befehle (ALT+T) entsprechend auch (sail commands sind somit hinfällig).
+
+Und können uns das Ergebnis unter http://localhost im Browser anschauen.
+
+Somit ist die Basisanwendung startklar! 
+
+# Gimmicks
+## Laravel-Jetstream installieren
+https://jetstream.laravel.com/2.x/features/api.html#enabling-api-support
+```
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+npm install
+npm run build
+php artisan migrate
+```
+
+## Blade UI Kit installieren
+```
+php artisan config:clear
+composer require blade-ui-kit/blade-ui-kit
+```
+
+# Veraltete Textpassagen
+
+## Sail alias in WSL registrieren
+Um den Befehl 'sail' ständig nutzen zu können, muss dieser einmalig (auch für zukünftige Projekte) in die .bashrc Datei als alias registriert werden. Dazu im Win-Explorer zum WSL-Benutzerordner (../home/max) wechseln und der .bashrc Datei folgende Zeile hinzufügen:
+```
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+```
+
 ## Laravel App testen
 Dazu innerhalb des Editors ein Terminal öffnen, mit ALT+T. Jetzt sollten wir automatisch innerhalb unseres Projektordners Befehlsgewalt haben. Dort starten wir nun unsere Testumgebung via sail:
 ```
@@ -63,22 +90,3 @@ sail up -d
 # stoppen
 sail stop
 ```
-Und können uns das Ergebnis unter http://localhost im Browser anschauen.
-
-Somit ist die Basisanwendung startklar! 
-
-# Gimmicks
-## Laravel-Jetstream installieren
-https://jetstream.laravel.com/2.x/features/api.html#enabling-api-support
-```
-sail composer require laravel/jetstream
-sail artisan jetstream:install livewire
-sail npm install
-sail npm run build
-sail artisan migrate
-```
-
-
-
-
-
