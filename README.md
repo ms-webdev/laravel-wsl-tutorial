@@ -62,6 +62,9 @@ Nun kann die App unter http://localhost im Browser geöffnet werden.
 
 Somit ist die Basisanwendung startklar! 
 
+# Wiki Links
+- https://github.com/ms-webdev/laravel-wsl-tutorial/wiki/Vite-&-TailwindCSS-einrichten
+
 # Clone from Github and Init
 
 Zuerst via VS-Code seine Laravel-Repo klonen, dann innerhalb des Terminals folgende Befehle ausführen:
