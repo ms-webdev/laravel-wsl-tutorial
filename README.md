@@ -78,6 +78,12 @@ docker run --rm --name laravel-pgsql \
     composer install --ignore-platform-reqs
 ```
 
+Nicht vergessen node_modules zu installieren, innerhalb des DevContainers
+
+```
+npm install
+```
+
 # Gimmicks
 ## Laravel-Jetstream installieren
 https://jetstream.laravel.com/2.x/features/api.html#enabling-api-support
