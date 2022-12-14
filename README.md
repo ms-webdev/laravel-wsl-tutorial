@@ -62,6 +62,22 @@ Nun kann die App unter http://localhost im Browser geöffnet werden.
 
 Somit ist die Basisanwendung startklar! 
 
+# Clone from Github and Init
+
+Zuerst via VS-Code seine Laravel-Repo klonen, dann innerhalb des Terminals folgende Befehle ausführen:
+
+https://laravel.com/docs/9.x/sail#installing-composer-dependencies-for-existing-projects
+
+```
+wsl
+docker run --rm --name laravel-pgsql \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php81-composer:latest \
+    composer install --ignore-platform-reqs
+```
+
 # Gimmicks
 ## Laravel-Jetstream installieren
 https://jetstream.laravel.com/2.x/features/api.html#enabling-api-support
