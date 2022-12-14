@@ -69,6 +69,9 @@ php artisan ui bootstrap --auth
 
 # install
 npm install
+
+# Database vorbereiten
+php artisan migrate
 ```
 
 ## Vite konfiguirieren
