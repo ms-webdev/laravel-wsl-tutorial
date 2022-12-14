@@ -63,9 +63,9 @@ Gute Grundausstattung mit nützlichen Features: https://github.com/laravel/ui
 # registrieren
 composer require laravel/ui
 
-# bootstrap scaffolding
-php artisan ui bootstrap
-php artisan ui bootstrap --auth
+# bootstrap (vue) scaffolding
+php artisan ui vue
+php artisan ui vue --auth
 
 # install
 npm install
