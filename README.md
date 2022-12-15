@@ -59,13 +59,13 @@ DB_DATABASE=test
 DB_USERNAME=postgres
 DB_PASSWORD=secret
 ```
-Die "Forward DB-Port" Einstellung kann dementsprechend ausgelassen werden.
+Die "Forward DB-Port" Einstellung kann dementsprechend ausgelassen werden. Des Weiteren können alle pgsql Angaben in der docker-compose.yml entfernt werden.
 
 ## Laravel App starten
 Dazu innerhalb des Editors ein Terminal öffnen, mit ALT+T. Jetzt sollten wir automatisch innerhalb unseres Projektordners Befehlsgewalt haben. Dort starten wir nun unsere Testumgebung via sail:
 ```
 # starten
-sail up -d
+sail up -d --remove-orphans
 
 # stoppen
 sail stop
