@@ -39,7 +39,7 @@ https://laravel.com/docs/9.x/installation#getting-started-on-linux
 
 
 ## Projekt in VS Code öffnen
-Starte den VS Code Editor und öffne ein WSL-Fenster, dazu im Editor die Taste F1 drücken und im Textfeld "new wsl window" eingeben bzw. auswählen. Unten links sollte nun "WSL:Ubuntu" zu sehen sein.
+Starte den VS Code Editor und öffne ein neues Fenster.
 
 Jetzt nur noch den eben erstellten Projektordner öffnen, unter "Ordner öffnen".
 
@@ -62,8 +62,11 @@ DB_PASSWORD=secret
 Die "Forward DB-Port" Einstellung kann dementsprechend ausgelassen werden. Des Weiteren können alle pgsql Angaben in der docker-compose.yml entfernt werden.
 
 ## Laravel App starten
-Dazu innerhalb des Editors ein Terminal öffnen, mit ALT+T. Jetzt sollten wir automatisch innerhalb unseres Projektordners Befehlsgewalt haben. Dort starten wir nun unsere Testumgebung via sail:
+Dazu innerhalb des Editors ein Terminal öffnen, mit ALT+T. Jetzt sollten wir automatisch innerhalb unseres Projektordners Befehlsgewalt haben. Dort starten wir nun unsere Testumgebung in WSL via sail:
 ```
+# in wsl anmelden
+wsl
+
 # starten
 sail up -d --remove-orphans
 
