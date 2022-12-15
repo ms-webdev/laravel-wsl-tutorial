@@ -49,6 +49,18 @@ Um unabhängig von weiteren installierten Datenbanksystemen auf die Laravel-Date
 FORWARD_DB_PORT=25062
 ```
 
+## Lokale DB-Server Einstellung
+Zugriff auf einen lokal auf Windows installierten PostgreSQL-Server, stellen wir wie folgt her (.env):
+```
+DB_CONNECTION=pgsql
+DB_HOST=host.docker.internal
+DB_PORT=5432
+DB_DATABASE=test
+DB_USERNAME=postgres
+DB_PASSWORD=secret
+```
+Die "Forward DB-Port" Einstellung kann dementsprechend ausgelassen werden.
+
 ## Laravel App starten
 Dazu innerhalb des Editors ein Terminal öffnen, mit ALT+T. Jetzt sollten wir automatisch innerhalb unseres Projektordners Befehlsgewalt haben. Dort starten wir nun unsere Testumgebung via sail:
 ```
